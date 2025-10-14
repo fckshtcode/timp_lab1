@@ -7,6 +7,8 @@
 #include "modAlphaCipher.h"
 
 using namespace std;
+
+bool onlyCyrillic(const wstring& s)
 {
     wstring ABC = L"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
     for (auto ch : s) {
