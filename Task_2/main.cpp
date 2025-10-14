@@ -1,6 +1,9 @@
 #include <iostream>
 #include <locale>
 #include <codecvt>
+#include <algorithm>
+#include <cwctype>
+#include <limits>
 #include "table.h"
 using namespace std;
 
@@ -8,6 +11,7 @@ bool onlyCyrillic(const wstring& s)
 {
     wstring ABC = L"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
     for (auto ch : s) {
+        if (iswspace(ch)) continue;
         if (ABC.find(ch) == wstring::npos) return false;
     }
     return true;
@@ -23,6 +27,16 @@ wstring toUpperCyr(const wstring& s)
         if (pos != wstring::npos) c = upper[pos];
     }
     return res;
+}
+
+wstring stripSpaces(const wstring& s)
+{
+    wstring out;
+    out.reserve(s.size());
+    for (wchar_t ch : s)
+        if (!iswspace(ch))
+            out.push_back(ch);
+    return out;
 }
 
 wstring str8_to_w(const string& s)
@@ -66,22 +80,23 @@ int main()
     do {
         cout << "Выберите режим (0 — выход, 1 — шифрование, 2 — расшифровка): ";
         if (!(cin >> action)) return 0;
-        cin.ignore();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         if (action > 2) {
             cout << "Неверный выбор режима." << endl;
         } else if (action > 0) {
             cout << "Введите строку: ";
             getline(cin, msgLine);
-            wstring msgW = str8_to_w(msgLine);
-            msgW = toUpperCyr(msgW);
 
-            if (onlyCyrillic(msgW)) {
+            wstring msgW = toUpperCyr(str8_to_w(msgLine));
+            wstring clean = stripSpaces(msgW);
+
+            if (onlyCyrillic(clean)) {
                 if (action == 1) {
-                    wstring enc = cipher.encrypt(msgW);
+                    wstring enc = cipher.encrypt(clean);
                     cout << "Зашифровано: " << w_to_str8(enc) << endl;
                 } else {
-                    wstring dec = cipher.decrypt(msgW);
+                    wstring dec = cipher.decrypt(clean);
                     cout << "Расшифровано: " << w_to_str8(dec) << endl;
                 }
             } else {
