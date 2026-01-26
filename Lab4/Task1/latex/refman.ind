@@ -1,0 +1,41 @@
+\begin{theindex}
+
+  \item {cipher\_error}, \hyperpage{7}
+    \subitem {cipher\_error}, \hyperpage{8}
+
+  \indexspace
+
+  \item {decrypt}
+    \subitem {modAlphaCipher}, \hyperpage{10}
+
+  \indexspace
+
+  \item {encrypt}
+    \subitem {modAlphaCipher}, \hyperpage{11}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{14}
+  \item {main.cpp}, \hyperpage{13}
+    \subitem {main}, \hyperpage{14}
+    \subitem {str8\_to\_w}, \hyperpage{14}
+    \subitem {w\_to\_str8}, \hyperpage{15}
+  \item {modAlphaCipher}, \hyperpage{9}
+    \subitem {decrypt}, \hyperpage{10}
+    \subitem {encrypt}, \hyperpage{11}
+    \subitem {modAlphaCipher}, \hyperpage{9}
+  \item {modAlphaCipher.cpp}, \hyperpage{15}
+  \item {modAlphaCipher.h}, \hyperpage{16}
+
+  \indexspace
+
+  \item {str8\_to\_w}
+    \subitem {main.cpp}, \hyperpage{14}
+
+  \indexspace
+
+  \item {w\_to\_str8}
+    \subitem {main.cpp}, \hyperpage{15}
+
+\end{theindex}

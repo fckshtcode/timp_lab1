@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Шифратор Гронсфельда: Файл main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Шифратор Гронсфельда
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Основная программа для работы с шифром модифицированного алфавитного шифра  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;locale&gt;</code><br />
+<code>#include &lt;codecvt&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cwctype&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &quot;<a class="el" href="modAlphaCipher_8h_source.html">modAlphaCipher.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" alt=""/></div>
+<map name="amain_8cpp" id="amain_8cpp">
+<area shape="rect" title="Основная программа для работы с шифром модифицированного алфавитного шифра" alt="" coords="240,5,323,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,85,107"/>
+<area shape="rect" title=" " alt="" coords="61,155,123,181"/>
+<area shape="rect" title=" " alt="" coords="147,155,221,181"/>
+<area shape="rect" title=" " alt="" coords="376,80,461,107"/>
+<area shape="rect" title=" " alt="" coords="486,80,562,107"/>
+<area shape="rect" title=" " alt="" coords="587,80,645,107"/>
+<area shape="rect" href="modAlphaCipher_8h.html" title="Заголовочный файл класса модифицированного алфавитного шифра" alt="" coords="211,80,352,107"/>
+<area shape="rect" title=" " alt="" coords="431,155,494,181"/>
+<area shape="rect" title=" " alt="" coords="519,155,577,181"/>
+<area shape="rect" title=" " alt="" coords="245,155,296,181"/>
+<area shape="rect" title=" " alt="" coords="321,155,407,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae4523e6a824b26c927c85719b430c3d2"><td class="memItemLeft" align="right" valign="top">wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae4523e6a824b26c927c85719b430c3d2">str8_to_w</a> (const string &amp;s)</td></tr>
+<tr class="memdesc:ae4523e6a824b26c927c85719b430c3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразует строку UTF-8 в широкую строку (wstring)  <a href="main_8cpp.html#ae4523e6a824b26c927c85719b430c3d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae4523e6a824b26c927c85719b430c3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd7446697f8822ef50d84e4ff6d1842"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a3bd7446697f8822ef50d84e4ff6d1842">w_to_str8</a> (const wstring &amp;ws)</td></tr>
+<tr class="memdesc:a3bd7446697f8822ef50d84e4ff6d1842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразует широкую строку (wstring) в строку UTF-8.  <a href="main_8cpp.html#a3bd7446697f8822ef50d84e4ff6d1842">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3bd7446697f8822ef50d84e4ff6d1842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Основная функция программы  <a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Основная программа для работы с шифром модифицированного алфавитного шифра </p>
+<dl class="section author"><dt>Автор</dt><dd>Ладыгин П.А. </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>17.12.25 </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>1.0</dd></dl>
+<p>Программа предоставляет консольный интерфейс для шифрования и расшифровки текста с использованием модифицированного алфавитного шифра. </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Основная функция программы </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Код завершения программы (0 - успешно, 1 - ошибка)</dd></dl>
+<p>Функция предоставляет пользовательский интерфейс для:</p><ol type="1">
+<li>Ввода ключа шифрования</li>
+<li>Выбора режима работы (шифрование/расшифровка)</li>
+<li>Ввода текста для обработки</li>
+<li>Вывода результатов </li>
+</ol>
+<p>&lt; Строка для хранения введенного ключа</p>
+<p>&lt; Строка для хранения введенного текста</p>
+<p>&lt; Переменная для выбора действия пользователем</p>
+
+</div>
+</div>
+<a id="ae4523e6a824b26c927c85719b430c3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4523e6a824b26c927c85719b430c3d2">&#9670;&nbsp;</a></span>str8_to_w()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wstring str8_to_w </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преобразует строку UTF-8 в широкую строку (wstring) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Строка в кодировке UTF-8 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Широкая строка (wstring) </dd></dl>
+
+</div>
+</div>
+<a id="a3bd7446697f8822ef50d84e4ff6d1842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd7446697f8822ef50d84e4ff6d1842">&#9670;&nbsp;</a></span>w_to_str8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string w_to_str8 </td>
+          <td>(</td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>ws</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преобразует широкую строку (wstring) в строку UTF-8. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ws</td><td>Широкая строка (wstring) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка в кодировке UTF-8 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,114 @@
+\hypertarget{main_8cpp}{}\doxysection{Файл main.\+cpp}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Основная программа для работы с табличным шифром  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$codecvt$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cwctype$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}table.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+wstring \mbox{\hyperlink{main_8cpp_ae4523e6a824b26c927c85719b430c3d2}{str8\+\_\+to\+\_\+w}} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Преобразует строку UTF-\/8 в широкую строку (wstring) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{main_8cpp_a3bd7446697f8822ef50d84e4ff6d1842}{w\+\_\+to\+\_\+str8}} (const wstring \&ws)
+\begin{DoxyCompactList}\small\item\em Преобразует широкую строку (wstring) в строку UTF-\/8. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Основная функция программы \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основная программа для работы с табличным шифром 
+
+\begin{DoxyAuthor}{Автор}
+Ладыгин П.\+А. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+17.\+12.\+25 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+1.\+0
+\end{DoxyVersion}
+Программа предоставляет консольный интерфейс для шифрования и расшифровки текста с использованием табличного шифра (маршрутной перестановки). 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Основная функция программы 
+
+\begin{DoxyReturn}{Возвращает}
+Код завершения программы (0 -\/ успешно, 1 -\/ ошибка)
+\end{DoxyReturn}
+Программа выполняет следующие действия\+:
+\begin{DoxyEnumerate}
+\item Запрашивает количество столбцов для таблицы
+\item Создает объект шифра \mbox{\hyperlink{classTable}{Table}} с указанным количеством столбцов
+\item Предоставляет меню для выбора операций (шифрование, расшифровка, выход)
+\item Обрабатывает ввод пользователя и выводит результаты
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Заметки}
+Для корректной работы с русским языком установлена локаль ru\+\_\+\+RU.\+UTF-\/8 
+\end{DoxyNote}
+$<$ Строка для ввода количества столбцов
+
+$<$ Строка для ввода текста
+
+$<$ Переменная для выбора действия\mbox{\Hypertarget{main_8cpp_ae4523e6a824b26c927c85719b430c3d2}\label{main_8cpp_ae4523e6a824b26c927c85719b430c3d2}} 
+\index{main.cpp@{main.cpp}!str8\_to\_w@{str8\_to\_w}}
+\index{str8\_to\_w@{str8\_to\_w}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{str8\_to\_w()}{str8\_to\_w()}}
+{\footnotesize\ttfamily wstring str8\+\_\+to\+\_\+w (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Преобразует строку UTF-\/8 в широкую строку (wstring) 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em s} & Строка в кодировке UTF-\/8 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Широкая строка (wstring) в Unicode
+\end{DoxyReturn}
+Используется для корректной работы с русским текстом в программе. \mbox{\Hypertarget{main_8cpp_a3bd7446697f8822ef50d84e4ff6d1842}\label{main_8cpp_a3bd7446697f8822ef50d84e4ff6d1842}} 
+\index{main.cpp@{main.cpp}!w\_to\_str8@{w\_to\_str8}}
+\index{w\_to\_str8@{w\_to\_str8}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{w\_to\_str8()}{w\_to\_str8()}}
+{\footnotesize\ttfamily string w\+\_\+to\+\_\+str8 (\begin{DoxyParamCaption}\item[{const wstring \&}]{ws }\end{DoxyParamCaption})}
+
+
+
+Преобразует широкую строку (wstring) в строку UTF-\/8. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ws} & Широкая строка (wstring) в Unicode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Строка в кодировке UTF-\/8
+\end{DoxyReturn}
+Используется для вывода текста в консоль. 
