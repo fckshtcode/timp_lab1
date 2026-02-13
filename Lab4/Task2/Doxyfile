@@ -1,9 +1,0 @@
-PROJECT_NAME = "Шифр маршрутной перестановки"
-INPUT = /home/stud/Desktop/fck/Lab4/Task2
-FILE_PATTERNS = *.h *.cpp
-EXTRACT_ALL = YES
-GENERATE_HTML = YES
-GENERATE_LATEX = YES
-OUTPUT_LANGUAGE = Russian
-RECURSIVE = NO
-
